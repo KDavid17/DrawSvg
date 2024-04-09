@@ -1,0 +1,8 @@
+svg {
+  border: 1px solid red;
+}
+
+rect {
+  fill: none;
+  stroke: blue;
+}

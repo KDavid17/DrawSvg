@@ -1,0 +1,12 @@
+<h3 aria-selected="false">Height: {{dimensions.height}}</h3>
+<h3 aria-selected="false">Width: {{dimensions.width}}</h3>
+<h3 aria-selected="false">Perimeter: {{perimeter}}</h3>
+
+<svg #svg width="400" height="300" (mousemove)="resizing($event)" (mouseleave)="endDrawing()" (mouseup)="endDrawing()">
+  <rect #rect fill="blue" stroke="black"
+        (mousedown)="startDrawing($event)"
+        [attr.width]="dimensions.width"
+        [attr.height]="dimensions.height"
+        [attr.stroke-width]="strokeWidth"
+        [attr.x]="x" [attr.y]="y"/>
+</svg>
